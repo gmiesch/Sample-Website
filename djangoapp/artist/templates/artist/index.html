@@ -10,7 +10,14 @@
 	<h3> Placeholder title for home </h3> 
 {% endblock %}
 
-<!-- Navbar from base.html is here -->
+{% block navbar %}
+<ul class="nav navbar-nav">
+    <li class="active"><a href="{% url 'artist:index' %}"> Home</a></li>
+    <li><a href="{% url 'artist:gallery' %}"> Gallery</a></li>
+    <li><a href="{% url 'artist:about' %}"> About</a></li>
+    <li><a href="{% url 'artist:contact' %}"> Contact</a></li>
+</ul>
+{% endblock %}
 
 {% block content %}
 	<p> Sample content </p>
