@@ -25,6 +25,12 @@
 	<hr>
 </div>
 
+<!-- 
+Need to pass a dictionary of information about each image into this template, should have: (title, url, caption) -> 
+	this image needs to go into the data-... below 
+
+Should do ranged loop over the dictionary instead of this horrible thing below
+-->
 {% for x in "xxxxxxxxxxxx" %}
 	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
 		<a class="thumbnail" href="#" data-toggle="modal" data-target="#modal" data-title="Sledge" data-url="http://placehold.it/350x350" data-caption="Sample caption: 12x12 Watercolor">
@@ -33,25 +39,24 @@
 	</div>
 
 	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="image-gallery-title"> Placeholder title </h4>
-            </div>
-            <div class="modal-body">
-                <img id="modal-img" class="img-responsive" src="">
-            </div>
-            <div class="modal-footer">
-	            <div class="col-md-8 text-justify">
-	                <p id="modal-caption"> Placeholder caption </p>
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+	                <h4 class="modal-title" id="image-gallery-title"> Placeholder title </h4>
 	            </div>
-            </div>
-        </div>
-    </div>
-</div>
+	            <div class="modal-body">
+	                <img id="modal-img" class="img-responsive" src="">
+	            </div>
+	            <div class="modal-footer">
+		                <p id="modal-caption"> Placeholder caption </p>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 {% endfor %}
 
+<!-- Move this to seperate file, this code handles setting the appropriate information in the modal -->
 <script> 
 	$(document).on("click", ".thumbnail", function() {
 		var title = $(this).data('title');
