@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'artist/base.css' %}" />
+    {% block css %} {% endblock %}
+    <title>{% block title %} Artist WebApp {% endblock %}</title>
+</head>
+
+<body>
+    <div id="page-title">
+        {% block page-title %}
+        <h3> Page Title </h3>
+        {% endblock %}
+    </div>
+
+    <div id="navbar">
+        {% block navbar %}
+        <ul>
+            <li><a href="{% url 'artist:index' %}"> Home</a></li>
+            <li><a href="{% url 'artist:gallery' %}"> Gallery</a></li>
+            <li><a href="{% url 'artist:about' %}"> About</a></li>
+            <li><a href="{% url 'artist:contact' %}"> Contact</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

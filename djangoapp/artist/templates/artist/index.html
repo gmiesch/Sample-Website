@@ -1,9 +1,17 @@
-{% load staticfiles %}
+{% extends 'artist/base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'artist/index.css' %}" />
+{% block css %} 
+	<link rel="stylesheet" type="text/css" href="/static/artist/index.css" /> 
+{% endblock %}
 
-<h3> Placeholder home page </h3>
+{% block title %} Home {% endblock %}
 
-<li><a href="{% url 'artist:gallery' %}"> Gallery</a></li>
-<li><a href="{% url 'artist:about' %}"> About</a></li>
-<li><a href="{% url 'artist:contact' %}"> Contact</a></li>
+{% block page-title %} 
+	<h3> Placeholder title for home </h3> 
+{% endblock %}
+
+<!-- Navbar from base.html is here -->
+
+{% block content %}
+	<p> Sample content </p>
+{% endblock %}

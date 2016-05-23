@@ -1,5 +1,17 @@
-{% load staticfiles %}
+{% extends 'artist/base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'artist/about.css' %}" />
+{% block css %} 
+	<link rel="stylesheet" type="text/css" href="/static/artist/about.css" /> 
+{% endblock %}
 
-<h3> Placeholder about page </h3>
+{% block title %} About {% endblock %}
+
+{% block page-title %} 
+	<h3> Placeholder title for about </h3> 
+{% endblock %}
+
+<!-- Navbar from base.html is here -->
+
+{% block content %}
+	<p> Sample content </p>
+{% endblock %}

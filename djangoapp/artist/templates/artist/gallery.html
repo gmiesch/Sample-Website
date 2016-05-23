@@ -1,5 +1,17 @@
-{% load staticfiles %}
+{% extends 'artist/base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'artist/gallery.css' %}" />
+{% block css %} 
+	<link rel="stylesheet" type="text/css" href="/static/artist/gallery.css" /> 
+{% endblock %}
 
-<h3> Placeholder gallery page </h3>
+{% block title %} Gallery {% endblock %}
+
+{% block page-title %} 
+	<h3> Placeholder title for gallery </h3> 
+{% endblock %}
+
+<!-- Navbar from base.html is here -->
+
+{% block content %}
+	<p> Sample content </p>
+{% endblock %}
