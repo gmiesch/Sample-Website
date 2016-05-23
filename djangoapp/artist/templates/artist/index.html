@@ -1,0 +1,9 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'artist/index.css' %}" />
+
+<h3> Placeholder home page </h3>
+
+<li><a href="{% url 'artist:gallery' %}"> Gallery</a></li>
+<li><a href="{% url 'artist:about' %}"> About</a></li>
+<li><a href="{% url 'artist:contact' %}"> Contact</a></li>
